@@ -1,5 +1,4 @@
 import { Refine, AuthProvider } from '@pankod/refine-core'
-import { MuiInferencer } from '@pankod/refine-inferencer/mui'
 import {
   notificationProvider,
   RefineSnackbarProvider,
@@ -115,29 +114,33 @@ function App() {
           catchAll={<ErrorComponent />}
           resources={[
             {
-              name: 'property',
-              list: MuiInferencer,
+              name: 'properties',
+              list: AllProperties,
+              show: PropertyDetails,
+              create: CreateProperty,
+              edit: EditProperty,
               icon: <VillaOutlined />,
             },
             {
-              name: 'agent',
-              list: MuiInferencer,
+              name: 'agents',
+              list: Agents,
+              show: AgentProfile,
               icon: <PeopleAltOutlined />,
             },
             {
-              name: 'review',
-              list: MuiInferencer,
+              name: 'reviews',
+              list: Home,
               icon: <StarOutlineRounded />,
             },
             {
-              name: 'message',
-              list: MuiInferencer,
+              name: 'messages',
+              list: Home,
               icon: <ChatBubbleOutline />,
             },
             {
               name: 'my-profile',
               options: { label: 'My Profile' },
-              list: MuiInferencer,
+              list: MyProfile,
               icon: <AccountCircleOutlined />,
             },
           ]}
