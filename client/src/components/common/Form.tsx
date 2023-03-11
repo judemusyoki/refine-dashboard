@@ -78,7 +78,7 @@ const Form = ({
             </FormHelperText>
             <TextareaAutosize
               minRows={5}
-              fullwidth
+              fullwidth="true"
               required
               placeholder="Write description"
               style={{
