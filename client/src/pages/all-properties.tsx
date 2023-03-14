@@ -155,8 +155,8 @@ const AllProperties = () => {
       <Box mt="20px" sx={{ display: 'flex', flexWrap: 'wrap', gap: 3 }}>
         {allProperties.map((property, index) => (
           <PropertyCard
-            key={`property-${index}-${property?.id}`}
-            id={property.id}
+            key={`property-${index}-${property?._id}`}
+            id={property._id}
             title={property.title}
             price={property.price}
             location={property.location}

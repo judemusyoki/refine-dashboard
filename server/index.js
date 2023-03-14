@@ -16,7 +16,7 @@ app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 // Parse requests with the JSON payload
-app.use(bodyParser.json())
+app.use(bodyParser.json({ limit: '10mb' }))
 
 app.get('/', (req, res) => {
   res.send({ message: 'Hello World! ' })
