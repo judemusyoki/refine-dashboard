@@ -55,6 +55,7 @@ function App() {
     login: async ({ credential }: CredentialResponse) => {
       const profileObj = credential ? parseJwt(credential) : null
 
+      // 'https://yariga-dashboard-wts2.onrender.com/api/v1/users'
       //  Save user to MongoDB..
       if (profileObj) {
         const response = await fetch('http://localhost:8080/api/v1/users', {
@@ -118,7 +119,7 @@ function App() {
       }
     },
   }
-
+  // https://yariga-dashboard-wts2.onrender.com/api/v1
   return (
     <ColorModeContextProvider>
       <CssBaseline />

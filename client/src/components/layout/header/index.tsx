@@ -25,7 +25,7 @@ export const Header: React.FC = () => {
       position="sticky"
       elevation={0}
       sx={{
-        background: '#FCFCFC',
+        background: (theme) => theme.palette.background.default,
       }}
     >
       <Toolbar>
@@ -35,13 +35,13 @@ export const Header: React.FC = () => {
           justifyContent="flex-end"
           alignItems="center"
         >
-          {/* <IconButton
+          <IconButton
             onClick={() => {
               setMode()
             }}
           >
             {mode === 'dark' ? <LightModeOutlined /> : <DarkModeOutlined />}
-          </IconButton> */}
+          </IconButton>
           <Stack
             direction="row"
             gap="16px"

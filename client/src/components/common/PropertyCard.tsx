@@ -23,6 +23,7 @@ const PropertyCard = ({
       component={Link}
       to={`/properties/show/${id}`}
       sx={{
+        backgroundImage: 'none',
         maxWidth: '330px',
         padding: '10px',
         '&:hover': {
@@ -46,11 +47,15 @@ const PropertyCard = ({
           flexDirection: 'row',
           justifyContent: 'space-between',
           gap: '10px',
-          paddingX: '5PX',
+          paddingX: '5px',
         }}
       >
         <Stack direction={'column'} gap={1}>
-          <Typography fontSize={16} fontWeight={500} color={'#11142d'}>
+          <Typography
+            fontSize={16}
+            fontWeight={500}
+            color={(theme) => theme.palette.text.primary}
+          >
             {title}
           </Typography>
           <Stack direction="row" gap={0.5} alignItems={'flex-start'}>
@@ -64,10 +69,14 @@ const PropertyCard = ({
           px={1.5}
           py={0.5}
           borderRadius={1}
-          bgcolor={'#dadefa'}
+          bgcolor={(theme) => theme.palette.background.default}
           height={'fit-content'}
         >
-          <Typography fontSize={12} fontWeight={600} color={'#475be8'}>
+          <Typography
+            fontSize={12}
+            fontWeight={600}
+            color={(theme) => theme.palette.info.main}
+          >
             ${price}
           </Typography>
         </Box>

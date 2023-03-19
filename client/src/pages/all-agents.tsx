@@ -13,7 +13,11 @@ const Agents = () => {
 
   return (
     <Box>
-      <Typography fontSize={25} fontWeight={700} color="#11142d">
+      <Typography
+        fontSize={25}
+        fontWeight={700}
+        color={(theme) => theme.palette.text.primary}
+      >
         Agents List
       </Typography>
 
@@ -23,7 +27,7 @@ const Agents = () => {
           display: 'flex',
           flexWrap: 'wrap',
           gap: '20px',
-          backgroundColor: '#fcfcfc',
+          backgroundColor: (theme) => theme.palette.background.paper,
         }}
       >
         {allAgents.map((agent) => (

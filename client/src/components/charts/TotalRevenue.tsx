@@ -11,17 +11,25 @@ const TotalRevenue = () => {
     <Box
       p={4}
       flex={1}
-      bgcolor="#fcfcfc"
+      bgcolor={(theme) => theme.palette.background.paper}
       id="chart"
       flexDirection="column"
       borderRadius="15px"
     >
-      <Typography fontSize={18} fontWeight={600} color="#11142d">
+      <Typography
+        fontSize={18}
+        fontWeight={600}
+        color={(theme) => theme.palette.text.primary}
+      >
         Total Revenue
       </Typography>
 
       <Stack my="20px" direction="row" gap={4} flexWrap="wrap">
-        <Typography fontSize={28} fontWeight={700} color="#11142d">
+        <Typography
+          fontSize={28}
+          fontWeight={700}
+          color={(theme) => theme.palette.text.primary}
+        >
           $236,535
         </Typography>
 
@@ -31,7 +39,10 @@ const TotalRevenue = () => {
             <Typography fontSize={15} color="#475be8">
               0.8%
             </Typography>
-            <Typography fontSize={12} color="#808191">
+            <Typography
+              fontSize={12}
+              color={(theme) => theme.palette.text.secondary}
+            >
               Than Last Month
             </Typography>
           </Stack>

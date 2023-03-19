@@ -10,10 +10,18 @@ interface ProgressBarProps {
 const ProgressBar = ({ title, percentage, color }: ProgressBarProps) => (
   <Box width="100%">
     <Stack direction="row" alignItems="center" justifyContent="space-between">
-      <Typography fontSize={16} fontWeight={500} color="#11142d">
+      <Typography
+        fontSize={16}
+        fontWeight={500}
+        color={(theme) => theme.palette.text.primary}
+      >
         {title}
       </Typography>
-      <Typography fontSize={16} fontWeight={500} color="#11142d">
+      <Typography
+        fontSize={16}
+        fontWeight={500}
+        color={(theme) => theme.palette.text.primary}
+      >
         {percentage}%
       </Typography>
     </Stack>
@@ -40,14 +48,18 @@ const PropertyReferrals = () => {
   return (
     <Box
       p={4}
-      bgcolor="#fcfcfc"
+      bgcolor={(theme) => theme.palette.background.paper}
       id="chart"
       minWidth={490}
       display="flex"
       flexDirection="column"
       borderRadius="15px"
     >
-      <Typography fontSize={18} fontWeight={600} color="#11142d">
+      <Typography
+        fontSize={18}
+        fontWeight={600}
+        color={(theme) => theme.palette.text.primary}
+      >
         Property Referals
       </Typography>
 

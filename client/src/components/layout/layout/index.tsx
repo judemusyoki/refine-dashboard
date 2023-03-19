@@ -1,5 +1,5 @@
 import { LayoutProps } from '@pankod/refine-core'
-import { Box, useTheme } from '@pankod/refine-mui'
+import { Box } from '@pankod/refine-mui'
 
 import React from 'react'
 

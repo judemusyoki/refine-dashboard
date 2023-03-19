@@ -24,7 +24,11 @@ const Home = () => {
 
   return (
     <Box>
-      <Typography fontSize={25} fontWeight={700} color="#11142D">
+      <Typography
+        fontSize={25}
+        fontWeight={700}
+        color={(theme) => theme.palette.text.primary}
+      >
         Dashboard
       </Typography>
 
@@ -69,17 +73,25 @@ const Home = () => {
         flex={1}
         borderRadius="15px"
         padding="20px"
-        bgcolor="#fcfcfc"
+        bgcolor={(theme) => theme.palette.background.paper}
         display="flex"
         flexDirection="column"
         minWidth="100%"
         mt="25px"
       >
-        <Typography fontSize="18px" fontWeight={600} color="#11142d">
+        <Typography
+          fontSize="18px"
+          fontWeight={600}
+          color={(theme) => theme.palette.text.primary}
+        >
           Latest Properties
         </Typography>
 
-        <Box mt={2.5} sx={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
+        <Box
+          mt={2.5}
+          sx={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}
+          bgcolor={(theme) => theme.palette.background.paper}
+        >
           {latestProperties.map((property) => (
             <PropertyCard
               key={property._id}

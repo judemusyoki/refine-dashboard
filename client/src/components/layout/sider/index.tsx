@@ -184,9 +184,13 @@ export const Sider: typeof DefaultSider = ({ render }: SiderProps) => {
                 py: isNested ? 1.25 : 1,
                 '&.Mui-selected': {
                   '&:hover': {
-                    backgroundColor: isSelected ? '#1e36e8' : 'transparent',
+                    backgroundColor: isSelected
+                      ? (theme) => theme.palette.info.contrastText
+                      : 'transparent',
                   },
-                  backgroundColor: isSelected ? '#475be8' : 'transparent',
+                  backgroundColor: isSelected
+                    ? (theme) => theme.palette.info.main
+                    : 'transparent',
                 },
                 justifyContent: 'center',
                 margin: '10px auto',
@@ -391,7 +395,7 @@ export const Sider: typeof DefaultSider = ({ render }: SiderProps) => {
             display: { xs: 'none', md: 'block' },
             '& .MuiDrawer-paper': {
               width: drawerWidth,
-              bgcolor: '#FCFCFC',
+              bgcolor: (theme) => theme.palette.background.default,
               overflow: 'hidden',
               transition: 'width 200ms cubic-bezier(0.4, 0, 0.6, 1) 0ms',
             },
@@ -413,6 +417,8 @@ export const Sider: typeof DefaultSider = ({ render }: SiderProps) => {
               flexGrow: 1,
               overflowX: 'hidden',
               overflowY: 'auto',
+              // dark theme: sider background color
+              backgroundColor: (theme) => theme.palette.background.paper,
             }}
           >
             {drawer}

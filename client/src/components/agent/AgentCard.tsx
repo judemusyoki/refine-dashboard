@@ -69,10 +69,17 @@ const AgentCard = ({
         gap={{ xs: 4, sm: 2 }}
       >
         <Stack gap={2} direction="row" flexWrap="wrap" alignItems="center">
-          <Typography fontSize={22} fontWeight={600} color="#11142d">
+          <Typography
+            fontSize={22}
+            fontWeight={600}
+            color={(theme) => theme.palette.text.primary}
+          >
             {name}
           </Typography>
-          <Typography fontSize={14} color="#808191">
+          <Typography
+            fontSize={14}
+            color={(theme) => theme.palette.text.secondary}
+          >
             Real-Estate Agent
           </Typography>
         </Stack>
@@ -84,16 +91,31 @@ const AgentCard = ({
           gap={2}
         >
           <InfoBar
-            icon={<EmailOutlined sx={{ color: '#808191' }} />}
+            icon={
+              <EmailOutlined
+                sx={{ color: (theme) => theme.palette.text.secondary }}
+              />
+            }
             name={email}
           />
-          <InfoBar icon={<Place sx={{ color: '#808191' }} />} name="London" />
           <InfoBar
-            icon={<Phone sx={{ color: '#808191' }} />}
+            icon={
+              <Place sx={{ color: (theme) => theme.palette.text.secondary }} />
+            }
+            name="London"
+          />
+          <InfoBar
+            icon={
+              <Phone sx={{ color: (theme) => theme.palette.text.secondary }} />
+            }
             name="+502-3231-4141"
           />
           <InfoBar
-            icon={<LocationCity sx={{ color: '#808191' }} />}
+            icon={
+              <LocationCity
+                sx={{ color: (theme) => theme.palette.text.secondary }}
+              />
+            }
             name={`${noOfProperties} Properties`}
           />
         </Stack>

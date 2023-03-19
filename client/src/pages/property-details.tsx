@@ -61,10 +61,14 @@ const PropertyDetails = () => {
     <Box
       borderRadius="15px"
       padding="20px"
-      bgcolor="#FCFCFC"
+      bgcolor={(theme) => theme.palette.background.paper}
       width="fit-content"
     >
-      <Typography fontSize={25} fontWeight={700} color="#11142D">
+      <Typography
+        fontSize={25}
+        fontWeight={700}
+        color={(theme) => theme.palette.text.primary}
+      >
         Details
       </Typography>
 
@@ -93,7 +97,7 @@ const PropertyDetails = () => {
               <Typography
                 fontSize={18}
                 fontWeight={500}
-                color="#11142D"
+                color={(theme) => theme.palette.text.primary}
                 textTransform="capitalize"
               >
                 {propertyDetails.propertyType}
@@ -117,13 +121,16 @@ const PropertyDetails = () => {
                   fontSize={22}
                   fontWeight={600}
                   mt="10px"
-                  color="#11142D"
+                  color={(theme) => theme.palette.text.primary}
                 >
                   {propertyDetails.title}
                 </Typography>
                 <Stack mt={0.5} direction="row" alignItems="center" gap={0.5}>
                   <Place sx={{ color: '#808191' }} />
-                  <Typography fontSize={14} color="#808191">
+                  <Typography
+                    fontSize={14}
+                    color={(theme) => theme.palette.text.secondary}
+                  >
                     {propertyDetails.location}
                   </Typography>
                 </Stack>
@@ -134,15 +141,23 @@ const PropertyDetails = () => {
                   fontSize={16}
                   fontWeight={600}
                   mt="10px"
-                  color="#11142D"
+                  color={(theme) => theme.palette.text.primary}
                 >
                   Price
                 </Typography>
                 <Stack direction="row" alignItems="flex-end" gap={1}>
-                  <Typography fontSize={25} fontWeight={700} color="#475BE8">
+                  <Typography
+                    fontSize={25}
+                    fontWeight={700}
+                    color={(theme) => theme.palette.info.main}
+                  >
                     ${propertyDetails.price}
                   </Typography>
-                  <Typography fontSize={14} color="#808191" mb={0.5}>
+                  <Typography
+                    fontSize={14}
+                    color={(theme) => theme.palette.text.secondary}
+                    mb={0.5}
+                  >
                     for one day
                   </Typography>
                 </Stack>
@@ -150,10 +165,16 @@ const PropertyDetails = () => {
             </Stack>
 
             <Stack mt="25px" direction="column" gap="10px">
-              <Typography fontSize={18} color="#11142D">
+              <Typography
+                fontSize={18}
+                color={(theme) => theme.palette.text.primary}
+              >
                 Description
               </Typography>
-              <Typography fontSize={14} color="#808191">
+              <Typography
+                fontSize={14}
+                color={(theme) => theme.palette.text.secondary}
+              >
                 {propertyDetails.description}
               </Typography>
             </Stack>
@@ -199,27 +220,42 @@ const PropertyDetails = () => {
               />
 
               <Box mt="15px">
-                <Typography fontSize={18} fontWeight={600} color="#11142D">
+                <Typography
+                  fontSize={18}
+                  fontWeight={600}
+                  color={(theme) => theme.palette.text.primary}
+                >
                   {propertyDetails.creator.name}
                 </Typography>
                 <Typography
                   mt="5px"
                   fontSize={14}
                   fontWeight={400}
-                  color="#808191"
+                  color={(theme) => theme.palette.text.secondary}
                 >
                   Agent
                 </Typography>
               </Box>
 
               <Stack mt="15px" direction="row" alignItems="center" gap={1}>
-                <Place sx={{ color: '#808191' }} />
-                <Typography fontSize={14} fontWeight={400} color="#808191">
+                <Place
+                  sx={{ color: (theme) => theme.palette.text.secondary }}
+                />
+                <Typography
+                  fontSize={14}
+                  fontWeight={400}
+                  color={(theme) => theme.palette.text.secondary}
+                >
                   North Carolina, USA
                 </Typography>
               </Stack>
 
-              <Typography mt={1} fontSize={16} fontWeight={600} color="#11142D">
+              <Typography
+                mt={1}
+                fontSize={16}
+                fontWeight={600}
+                color={(theme) => theme.palette.text.primary}
+              >
                 {propertyDetails.creator.allProperties.length} Properties
               </Typography>
             </Stack>
