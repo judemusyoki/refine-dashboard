@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from '@pankod/refine-mui'
+import { Box, Stack, Typography, useTheme } from '@pankod/refine-mui'
 
 import ReactApexChart from 'react-apexcharts'
 
@@ -7,6 +7,45 @@ import { ArrowCircleUpRounded } from '@mui/icons-material'
 import { TotalRevenueOptions, TotalRevenueSeries } from './chart.config'
 
 const TotalRevenue = () => {
+  const theme = useTheme()
+  const textColor = theme.palette.text.secondary
+
+  const xaxisOptions = {
+    labels: {
+      style: {
+        colors: [
+          textColor,
+          textColor,
+          textColor,
+          textColor,
+          textColor,
+          textColor,
+          textColor,
+        ],
+      },
+    },
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+  }
+
+  const yaxisOptions = {
+    labels: {
+      style: {
+        colors: [
+          textColor,
+          textColor,
+          textColor,
+          textColor,
+          textColor,
+          textColor,
+        ],
+      },
+    },
+    title: {
+      text: '$ (thousands)',
+      style: { color: textColor },
+    },
+  }
+
   return (
     <Box
       p={4}
@@ -53,7 +92,17 @@ const TotalRevenue = () => {
         series={TotalRevenueSeries}
         type="bar"
         height={310}
-        options={TotalRevenueOptions}
+        options={{
+          ...TotalRevenueOptions,
+          legend: {
+            ...TotalRevenueOptions.legend,
+            labels: {
+              colors: [textColor],
+            },
+          },
+          xaxis: xaxisOptions,
+          yaxis: yaxisOptions,
+        }}
       />
     </Box>
   )

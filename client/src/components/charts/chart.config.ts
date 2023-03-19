@@ -36,49 +36,13 @@ export const TotalRevenueOptions: ApexOptions = {
     colors: ['transparent'],
     width: 4,
   },
-  xaxis: {
-    labels: {
-      style: {
-        colors: [
-          '#efefef',
-          '#efefef',
-          '#efefef',
-          '#efefef',
-          '#efefef',
-          '#efefef',
-          '#efefef',
-        ],
-      },
-    },
-    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
-  },
-  yaxis: {
-    labels: {
-      style: {
-        colors: [
-          '#efefef',
-          '#efefef',
-          '#efefef',
-          '#efefef',
-          '#efefef',
-          '#efefef',
-        ],
-      },
-    },
-    title: {
-      text: '$ (thousands)',
-      style: { color: '#EFEFEF' },
-    },
-  },
+
   fill: {
     opacity: 1,
   },
   legend: {
     position: 'top',
     horizontalAlign: 'right',
-    labels: {
-      colors: ['#efefef'],
-    },
   },
   tooltip: {
     y: {
