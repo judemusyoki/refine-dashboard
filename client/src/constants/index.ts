@@ -24,4 +24,4 @@ export const propertyReferralsInfo = [
     percentage: 15,
     color: '#F45252',
   },
-];
+]

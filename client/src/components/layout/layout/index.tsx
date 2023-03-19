@@ -1,9 +1,10 @@
-import React from "react";
-import { LayoutProps } from "@pankod/refine-core";
-import { Box } from "@pankod/refine-mui";
+import { LayoutProps } from '@pankod/refine-core'
+import { Box, useTheme } from '@pankod/refine-mui'
 
-import { Sider as DefaultSider } from "../sider";
-import { Header as DefaultHeader } from "../header";
+import React from 'react'
+
+import { Header as DefaultHeader } from '../header'
+import { Sider as DefaultSider } from '../sider'
 
 export const Layout: React.FC<LayoutProps> = ({
   Sider,
@@ -12,18 +13,18 @@ export const Layout: React.FC<LayoutProps> = ({
   OffLayoutArea,
   children,
 }) => {
-  const SiderToRender = Sider ?? DefaultSider;
-  const HeaderToRender = Header ?? DefaultHeader;
+  const SiderToRender = Sider ?? DefaultSider
+  const HeaderToRender = Header ?? DefaultHeader
 
   return (
     <Box display="flex" flexDirection="row">
       <SiderToRender />
       <Box
         sx={{
-          display: "flex",
-          flexDirection: "column",
+          display: 'flex',
+          flexDirection: 'column',
           flex: 1,
-          minHeight: "100vh",
+          minHeight: '100vh',
         }}
       >
         <HeaderToRender />
@@ -41,5 +42,5 @@ export const Layout: React.FC<LayoutProps> = ({
       </Box>
       {OffLayoutArea && <OffLayoutArea />}
     </Box>
-  );
-};
+  )
+}

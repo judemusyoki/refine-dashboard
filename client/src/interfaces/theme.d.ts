@@ -1,4 +1,4 @@
-import '@pankod/refine-mui';
+import '@pankod/refine-mui'
 
 export interface CustomTheme {
   // Add custom variables here like below:
