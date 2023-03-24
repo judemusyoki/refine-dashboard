@@ -1,4 +1,4 @@
-# Yariga-properties
+# Refine Properties Dashboard
 
 Project Name
 This real estate listing app built with Refine Framework and ReactJS allows users to easily search and view property listings, agents, and reviews. The dashboard feature provides agents with a user-friendly interface to manage their properties and communicate with potential clients. The app offers a variety of search filters and sorting options to help users find their desired property quickly. In addition, users can leave reviews for agents and properties, which helps build trust and transparency within the platform. Overall, the app offers a seamless and efficient experience for both buyers and sellers in the real estate market.
